@@ -1,4 +1,4 @@
--- Creación de la base de datos Aseni Caso 1
+-- CreaciÃ³n de la base de datos Aseni Caso 1
 -- CREATE DATABASE aseni_c1;
 
 -- Tablas:
@@ -11,6 +11,7 @@ CREATE TABLE type_user(
 
 CREATE TABLE party(
 	idparty int IDENTITY(1,1) PRIMARY KEY,
+	nameparty nvarchar(50) NOT NULL,
 	registdate date NOT NULL,
 	urlflag nvarchar(200) NOT NULL,
 	urllogo nvarchar(200) NOT NULL
@@ -76,7 +77,7 @@ CREATE TABLE action_gov(
         ON UPDATE CASCADE
 );
 
--- Tablas de transición
+-- Tablas de transiciÃ³n
 CREATE TABLE party_manager(
 	idmanager int IDENTITY(1,1) PRIMARY KEY,
 	iduser int NOT NULL,
